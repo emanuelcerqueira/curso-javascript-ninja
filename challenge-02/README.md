@@ -74,20 +74,8 @@ function funcao(n1, n2, n3) {
   if(n1 !== undefined && n2 === undefined && n3 === undefined) {
     return n1;
   }
-  else if(n2 !== undefined && n1 === undefined && n3 === undefined) {
-    return n2;
-  }
-  else if(n3 !== undefined && n1 === undefined && n2 === undefined) {
-    return n3;
-  }
   else if(n1 !== undefined && n2 !== undefined && n3 === undefined) {
     return n1 + n2;
-  }
-  else if(n1 !== undefined && n3 !== undefined && n2 === undefined) {
-    return n1 + n3;
-  }
-  else if(n2 !== undefined && n3 !== undefined && n1 === undefined) {
-    return n2 + n3;
   }
   else if(n1 !== undefined && n2 !== undefined && n3 !== undefined) {
     return (n1 + n2) / n3;
