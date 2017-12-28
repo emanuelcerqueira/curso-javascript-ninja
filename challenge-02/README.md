@@ -70,8 +70,39 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-
+function funcao(n1, n2, n3) {
+  if(n1 !== undefined && n2 === undefined && n3 === undefined) {
+    return n1;
+  }
+  else if(n2 !== undefined && n1 === undefined && n3 === undefined) {
+    return n2;
+  }
+  else if(n3 !== undefined && n1 === undefined && n2 === undefined) {
+    return n3;
+  }
+  else if(n1 !== undefined && n2 !== undefined && n3 === undefined) {
+    return n1 + n2;
+  }
+  else if(n1 !== undefined && n3 !== undefined && n2 === undefined) {
+    return n1 + n3;
+  }
+  else if(n2 !== undefined && n3 !== undefined && n1 === undefined) {
+    return n2 + n3;
+  }
+  else if(n1 !== undefined && n2 !== undefined && n3 !== undefined) {
+    return (n1 + n2) / n3;
+  }
+  else if(n1 === undefined && n2 === undefined && n3 === undefined) {
+    return false;
+  }
+  else{
+    return null;
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+funcao(); // false
+funcao(5); // 5
+funcao(5, 10) // 15
+funcao(20, 10, 5) // 6
 ```
