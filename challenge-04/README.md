@@ -18,6 +18,7 @@ isTruthy(0); // false
 isTruthy(-0); // false
 isTruthy(''); // false
 isTruthy(""); // false
+isTruthy(NaN); // false
 isTruthy(false); // false
 
 /*
