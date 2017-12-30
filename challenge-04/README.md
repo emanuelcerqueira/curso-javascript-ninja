@@ -30,8 +30,8 @@ isTruthy(-10); // true
 isTruthy('javascript'); // true
 isTruthy('0'); // true
 isTruthy('undefined'); // true
-isTruthy('null'); // true
-isTruthy('false'); // true
+isTruthy({}); // true
+isTruthy([]); // true
 isTruthy(true); // true
 
 /*
