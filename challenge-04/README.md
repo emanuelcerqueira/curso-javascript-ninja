@@ -117,7 +117,7 @@ carro.adiconarPessoas = function(n) {
     return 'O carro já está lotado!'
   }
   else if(carro.quantidadePessoas + n > carro.assentos) {
-    var strPessoa = carro.assentos - carro.quantidadePessoas ? 'pessoa':'pessoas';
+    var strPessoa = carro.assentos - carro.quantidadePessoas == 1 ? 'pessoa':'pessoas';
     return 'Só cabem mais '+(carro.assentos - carro.quantidadePessoas)+' '+strPessoa+'!';
   }
   carro.quantidadePessoas += n;
