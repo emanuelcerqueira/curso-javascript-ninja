@@ -76,7 +76,7 @@ Mostre o resultado no console.
 */
 console.log( '\nEra "Roberto", agora é:' );
 var roberto = 'Roberto';
-console.log(roberto.slice(0, roberto.length - 1).concat(roberto[roberto.length - 1].replace('o', 'a')));
+console.log(roberto.replace('to', 'ta'));
 
 /*
 Mostre no console a parte "nando" da string "Fernando". Use o método que
