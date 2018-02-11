@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>CEP</title>
+  <meta charset="utf-8">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.1.1/cleave.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-3">Buscar CEP</h1>
+    <form data-form="form">
+      <div class="form-group">
+        <label>CEP</label>
+        <input class="form-control" type="text" data-form="cep" required autofocus>
+      </div>
+      <button class="btn btn-primary" type="submit">buscar</button>
+    </form>
+
+    <div class="alert alert-info my-2" role="alert">
+      <b>Mensagem:</b> <span data-js="message"></span>
+    </div>
+
+    <ul class="list-group">
+      <li class="list-group-item">Logradouro: <span data-cep="logradouro"></span></li>
+      <li class="list-group-item">Bairro: <span data-cep="bairro"></span></li>
+      <li class="list-group-item">Estado: <span data-cep="estado"></span></li>
+      <li class="list-group-item">Cidade: <span data-cep="cidade"></span></li>
+      <li class="list-group-item">CEP: <span data-cep="cep"></span></li>
+    </ul>
+  </div>
+  <script>
+    var cleaveCep = new Cleave('[data-form="cep"]', {
+      delimiter: '-',
+      blocks: [5, 3],
+      numericOnly:true,
+      uppercase: true
+    });
+  </script>
+
+  <script src="challenge-28.js"></script>
+</body>
+</html>
